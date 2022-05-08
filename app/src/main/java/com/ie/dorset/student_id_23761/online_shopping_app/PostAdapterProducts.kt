@@ -1,10 +1,13 @@
 package com.ie.dorset.student_id_23761.online_shopping_app
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -39,9 +42,17 @@ class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         Glide.with(itemView.context).load(post.image).centerCrop().into(image)
 
+        itemView.setOnClickListener {
+
+
+            Toast.makeText(itemView.context, "${post.title}", Toast.LENGTH_LONG).show()
+
+        }
+
 
 
 
     }
+
 
 }

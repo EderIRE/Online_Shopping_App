@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -29,10 +30,18 @@ class PostViewHolders(itemView: View) : RecyclerView.ViewHolder(itemView){
     private val password : TextView = itemView.findViewById(R.id.password)
 
 
+
+
     fun bindView(post: Users) {
         email.text = "Email: ${post.email}"
         username.text = "Username: ${post.username}"
         password.text = "Password: ${post.password}"
+
+        itemView.setOnClickListener {
+
+            Toast.makeText(itemView.context, "${post.email}", Toast.LENGTH_LONG).show()
+
+        }
 
     }
 

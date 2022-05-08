@@ -23,7 +23,6 @@ interface ApiServiceCarts {
 }
 
 interface ApiServiceSignIn {
-    @FormUrlEncoded
-    @POST("/auth/login")
-    fun signIn(@Field("username") string: String, @Field("password") storing: String) : Call<MutableList<SignIn>>
+    //@POST("/auth/login")
+    //fun loginSign(@Body SignIn signIn) : Call<MutableList<SignIn>>
 }

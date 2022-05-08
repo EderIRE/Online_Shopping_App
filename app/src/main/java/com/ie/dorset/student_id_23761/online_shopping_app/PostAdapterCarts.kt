@@ -15,6 +15,7 @@ class PostAdapterCarts (val carts: MutableList<Carts>): RecyclerView.Adapter<Pos
 
     override fun onBindViewHolder(holder: PostViewHolderCarts, position: Int) {
         return holder.bindView(carts[position])
+
     }
 
     override fun getItemCount(): Int {
@@ -31,10 +32,14 @@ class PostViewHolderCarts(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
 
-    fun bindView(post : Carts) {
+
+    fun bindView(post: Carts) {
         id.text = "Id: ${post.id.toString()}"
         userId.text = "User ID: ${post.userId.toString()}"
         date.text = "Date: ${post.date.toString()}"
+
+
+
 
 
     }

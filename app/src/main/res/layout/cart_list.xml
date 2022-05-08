@@ -29,6 +29,24 @@
         android:layout_height="match_parent"
         android:text="Date" />
 
+    <TextView
+        android:id="@+id/products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="products" />
+
+    <TextView
+        android:id="@+id/productsId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="productsId" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="quantity" />
+
 
 
 

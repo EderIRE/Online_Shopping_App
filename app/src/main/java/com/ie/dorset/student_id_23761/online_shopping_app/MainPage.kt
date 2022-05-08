@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +27,15 @@ class MainPage : AppCompatActivity() {
         val btnExit = findViewById<FloatingActionButton>(R.id.btnExit)
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
+
+
+        val serviceGenerator = ServiceGenerator.buildService(ApiServiceUsers::class.java)
+        val call = serviceGenerator.getUsers()
+
+
+        val recycleView = findViewById<RecyclerView>(R.id.recycleView2)
+
+
 
 
 
@@ -50,8 +61,9 @@ class MainPage : AppCompatActivity() {
                 Log.e("Error", "Your API failed")
             }
         })
-
          */
+
+
 
 
         btn.setOnClickListener {
@@ -65,23 +77,28 @@ class MainPage : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-            else if ((user == "johnd" && pass == "m38rmF$")
-                || (user == "mor_2314" && pass == "83r5^_")
-                || (user == "kevinryan" && pass == "kev02937@")
-                || (user == "donero" && pass == "ewedon")
-                || (user == "derek" && pass == "jklg*_56")
-                || (user == "david_r" && pass == "3478*#54")
-                || (user == "snyder" && pass == "f238&@*$")
-                || (user == "hopkins" && pass == "William56\$hj")
-                || (user == "kate_h" && pass == "kfejk@*_")
-                || (user == "jimmie_k" && pass == "klein*#%*")) {
-                val intent = Intent(this@MainPage, ProductActivity::class.java)
-                startActivity(intent)
-                finish()
+            if((user == "johnd" && pass == "m38rmF$")
+                    || (user == "mor_2314" && pass == "83r5^_")
+                    || (user == "kevinryan" && pass == "kev02937@")
+                    || (user == "donero" && pass == "ewedon")
+                    || (user == "derek" && pass == "jklg*_56")
+                    || (user == "david_r" && pass == "3478*#54")
+                    || (user == "snyder" && pass == "f238&@*$")
+                    || (user == "hopkins" && pass == "William56\$hj")
+                    || (user == "kate_h" && pass == "kfejk@*_")
+                    || (user == "jimmie_k" && pass == "klein*#%*")) {
+
+                    val intent = Intent(this@MainPage, ProductActivity::class.java)
+                    startActivity(intent)
+                    finish()
 
             }
             else Toast.makeText(this@MainPage, "User Invalid", Toast.LENGTH_SHORT).show()
+
+
         }
+
+
 
 
         btnExit.setOnClickListener {

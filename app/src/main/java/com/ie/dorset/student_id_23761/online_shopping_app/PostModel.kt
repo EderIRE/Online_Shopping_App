@@ -17,13 +17,12 @@ data class Users (
     val password : String? = null
 )
 
-data class Carts (
-    val id : Int? = null,
+data class Carts(
+    val id: Int? = null,
     val userId: Int? = null,
-    val date : Date? = null
+    val date: Date? = null
+
 )
-
-
 
 data class SignIn (
     val username : String? = null,
