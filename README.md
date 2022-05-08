@@ -4,7 +4,7 @@
 ## Requirements: 
 ### Authentication
 - [ ] Allow User to Signup 
-- [ ] Log In using username and password 
+- [x] Log In using username and password 
 - [ ] Store userID and token once logged in, to keep the user logged in (even after restarting the app) 
 ### Product Listing 
 - [ ] List Product Categories 
